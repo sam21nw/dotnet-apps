@@ -12,4 +12,6 @@ app.MapGet("/", () => Results.Json(new { message = "Hello World" }));
 
 app.MapGamesEndpoints();
 
+await app.MigrateDbAsync();
+
 app.Run();
