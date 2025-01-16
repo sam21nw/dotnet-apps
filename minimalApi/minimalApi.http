@@ -1,35 +1,48 @@
 @minimalApi_HostAddress = http://localhost:5292
 @gamesRoute = api/v1/games
+@id=4
+
 
 GET {{minimalApi_HostAddress}}/
 
 ###
-GET {{minimalApi_HostAddress}}/{{gamesRoute}}
+
+GET {{minimalApi_HostAddress}}/api/v1/games
 
 ###
-GET {{minimalApi_HostAddress}}/{{gamesRoute}}/3
 
-###
-POST {{minimalApi_HostAddress}}/{{gamesRoute}}
+POST {{minimalApi_HostAddress}}/api/v1/games
 Content-Type: application/json
 
 {
-    "name": "GTA 6",
-    "genreId": 2,
+    "name": "FortNite",
+    "genreId": 4,
     "price": 33.9,
     "releaseDate": "2022-02-11"
 }
 
 ###
-PUT {{minimalApi_HostAddress}}/{{gamesRoute}}/1
+
+DELETE {{minimalApi_HostAddress}}/api/v1/games/{{id}}
+
+###
+
+GET {{minimalApi_HostAddress}}/api/v1/games/{{id}}
+
+###
+
+PUT {{minimalApi_HostAddress}}/api/v1/games/{{id}}
 Content-Type: application/json
 
 {
-    "name": "Need for Speed",
-    "genreId": 4,
-    "price": 87.9,
-    "releaseDate": "2016-06-23"
+    "name": "FortNite",
+    "genreId": 2,
+    "price": 33.9,
+    "releaseDate": "2018-10-29"
 }
 
 ###
-DELETE {{minimalApi_HostAddress}}/{{gamesRoute}}/2
+
+GET {{minimalApi_HostAddress}}/api/v1/genres
+
+###

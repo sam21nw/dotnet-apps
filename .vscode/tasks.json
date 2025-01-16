@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "watch GameStoreApi",
+			"file": "D:\\source\\repos\\dotnet-apps\\GameStoreApi\\GameStoreApi.csproj",
+			"problemMatcher": [],
+			"label": "dotnet: watch GameStoreApi"
+		}
+	]
+}

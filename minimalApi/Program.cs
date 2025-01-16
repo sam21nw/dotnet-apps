@@ -11,6 +11,7 @@ var app = builder.Build();
 app.MapGet("/", () => Results.Json(new { message = "Hello World" }));
 
 app.MapGamesEndpoints();
+app.MapGenresEndpoints();
 
 await app.MigrateDbAsync();
 
