@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_PASSWORD: P@ssw0rd  # Set the superuser password
+      POSTGRES_USER: sa         # (Optional) Set the superuser username
+      POSTGRES_DB:          # (Optional) Set the default database
+    ports:
+      - "5432:5432"  # Expose PostgreSQL on port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data in a Docker volume
+
+volumes:
+  postgres_data:
